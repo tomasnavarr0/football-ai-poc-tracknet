@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+football-ai-poc-tracknet/Dataset/football/*
+
+football-ai-poc-tracknet/output_predictions/*
+
