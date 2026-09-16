@@ -1,0 +1,44 @@
+[project]
+name = "football-ai"
+version = "0.1.0"
+description = "Amateur Football Ball Tracking with SAM 3.1 Multiplex and TrackNetV4"
+readme = "README.md"
+requires-python = ">=3.12, <3.14"
+dependencies = [
+    "torch",
+    "torchvision",
+    "safetensors>=0.4.0",
+    "timm>=1.0.0",
+    "tqdm>=4.66.0",
+    "ftfy>=6.1.1",
+    "regex>=2024.0.0",
+    "iopath>=0.1.9",
+    "opencv-python>=4.10.0",
+    "pandas>=2.2.0",
+    "matplotlib>=3.9.0",
+    "keras>=3.5.0",
+    "einops>=0.8.0",
+    "scikit-image>=0.24.0",
+    "scikit-learn>=1.5.0",
+    "scipy>=1.13.0",
+    "psutil>=6.0.0",
+    "triton-windows>=3.0.0",
+    "pycocotools",
+    "decord",
+    "tensorflow>=2.17.0",
+    "sam3",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
+sam3 = { path = "sam3", editable = true }
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

@@ -216,7 +216,31 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-football-ai-poc-tracknet/Dataset/football/*
 
-football-ai-poc-tracknet/output_predictions/*
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
 
+# Model weights & large checkpoints
+*.safetensors
+*.pt
+*.pth
+*.keras
+*.h5
+*.onnx
+models/
+tracknetv4_best.pt
+
+# Datasets, videos and output predictions
+Dataset/
+output_predictions/
+predictions/
+videos/
+*.mp4
+*.avi
+*.jpg
+*.jpeg
+*.png
+*.csv
